@@ -25,3 +25,4 @@ For this study, we will use Multimodal Deep Learning (MDL) in order to harness m
 
 #### BERT for Pharmacy Text Classification
 ![bertplots](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/bertplots.jpg)
+High accuracy was achieved using BERT to classify pharmacy website text, using Accredited (0) and Non-Accredited (1) labels. 
