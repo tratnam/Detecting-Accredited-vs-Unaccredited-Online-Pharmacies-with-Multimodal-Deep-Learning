@@ -22,3 +22,6 @@ One dataframe will be created for all of the data collected, with a feature dist
 
 #### Multimodal Deep Learning
 For this study, we will use Multimodal Deep Learning (MDL) in order to harness multiple types of data. The main two types of data will be text and images. A neural network like a Convolutional Neural Network (CNN) would be appropriate for training on images. A neural network like Long-Short-Term-Memory (LSTM) would be appropriate for modeling text data. For MDL, these different neural networks can be combined through concatenation, and then applying softmax, in order to achieve a single output. Since the data are different and of different sizes, it is necessary to add weighted combinations to the subnetworks. This process can improve the overall outcome of the predictions when compared to modeling the neural networks separately. 
+
+#### BERT for Pharmacy Text Classification
+![bertplots](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/bertplots.jpg)
