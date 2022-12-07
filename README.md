@@ -7,7 +7,9 @@ The objective of this study was to harness neural networks to solve the rampant 
 The National Association of Boards of Pharmacy claims that 96% of all online pharmacies are illegitimate. Currently, the process of verifying legitimacy is manual and slow. In order to flag suspicious online pharmacies that may be selling unsafe medications, it is necessary to create an automated process that can detect whether an online pharmacy is accredited or not. There has yet to be a Deep Learning study that identifies non-accredited pharmaceutical websites. Our study is the first to train complex neural networks to detect accredited and non-accredited pharmaceutical websites.
 
 ### Methodology
-Our custom dataset includes web-scraped content from the home pages of 72 known accredited and non-accredited pharmacies. Below are the notebooks, datasets, models, and results.
+Our custom dataset includes web-scraped content from the home pages of 72 known accredited and non-accredited pharmacies. 
+
+Below are the notebooks, datasets, models, and results:
 
 * [Webscraping online pharmacies, parsing data, & building datasets](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/WebScrape_ToDatafame_AllPharmacies.ipynb)
 
