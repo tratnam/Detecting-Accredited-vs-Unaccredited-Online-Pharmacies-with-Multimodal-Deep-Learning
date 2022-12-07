@@ -32,4 +32,4 @@ MobileNetV2 Model Performance
 <img src="https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/plots/MobileNetResults.png" width="300" height="300" />
 
 ### Future Work
-We recommend combining the image and text models with a MultliModal Model for a more comprehensive approach to classifying pharmacy website content as a whole. 
+We recommend concatenating the image and text models with a MultliModal Model for a more comprehensive approach to classifying pharmacy website content as a whole. 
