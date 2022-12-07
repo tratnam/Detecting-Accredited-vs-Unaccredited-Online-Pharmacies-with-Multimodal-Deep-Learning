@@ -1,29 +1,35 @@
-# Detecting Accredited vs Unaccredited Online Pharmacies with Multimodal Deep Learning
+## Detecting Accredited & Non-Accredited Online Pharmacies with Deep Learning
 
-For this project, we propose a study that harnesses Multimodal Deep Learning, using different forms of deep learning such as Natural Language Processing (NLP) and image recognition to train models to detect whether a pharmaceutical website is accredited or not accredited. Many studies have been conducted that identify fake web articles and scam websites using Deep Learning. Some studies have been conducted to identify illicit drug sales online and through social media using NLP and image recognition. However, there have been no Deep Learning studies to identify illegal pharmaceutical websites.
+### Abstract
+The objective of this study was to harness neural networks to solve the rampant problem of non-accredited online pharmacies performing unapproved sales of drugs. A BERT model and MobileNetV2 model were used to classify the text and images of online pharmacies as accredited and non-accredited. Both models achieved moderately high accuracy on the validation datasets, with the BERT model at 90% and the MobileNetV2 model at 87% accuracy. Future work using a MultiModal model is recommended to combine the image and text models for improved overall accuracy.
 
-Non-accredited online pharmacies is an ever growing issue on the internet that could have harmful consequences, such as the sale of fake or expired drugs, and identity theft or financial scams. Our study will be the first to train complex neural networks to detect accredited versus non-accredited pharmaceutical websites.
+### Motivation
+The National Association of Boards of Pharmacy claims that 96% of all online pharmacies are illegitimate. Currently, the process of verifying legitimacy is manual and slow. In order to flag suspicious online pharmacies that may be selling unsafe medications, it is necessary to create an automated process that can detect whether an online pharmacy is accredited or not. There has yet to be a Deep Learning study that identifies non-accredited pharmaceutical websites. Our study is the first to train complex neural networks to detect accredited and non-accredited pharmaceutical websites.
 
-### Data Collection
-According to the National Association of Boards of Pharmacy, there are several red flags that can indicate if an online site is a scam: the site does not ask for a prescription, there is no way to speak to a pharmacist, no license, and fear-based tactics may be used [6]. The FDA says that an accredited pharmacy should always require a doctor’s prescription, has a physical address and telephone number in the United States, is licensed in the state(s) in which they are operating, is licensed in all states in which they do business; and has a state-licensed pharmacist on staff to answer patient questions.
+### Methodology
+Our custom dataset includes web-scraped content from the home pages of 72 known accredited and non-accredited pharmacies. Below are the notebooks, datasets, models, and results.
 
-Since there is no existing dataset for this topic, we will build our own. The NABP has developed a website where users can check whether or not a website is legitimate, and provide a public list of all accredited online pharmacies. We will use this list of 87 known accredited pharmacies to train our model to identify authentic pharmacies. The FDA provides a public list of 45 known non-authentic online pharmacies. For our study, we will use this list to train our model to identify non-authentic online pharmacies. Our ultimate goal is to pass a new URL into our system and identify if the website is accredited or not by using deep learning models to verify the requirements.
+* [Webscraping online pharmacies, parsing data, & building datasets](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/WebScrape_ToDatafame_AllPharmacies.ipynb)
 
-### Classification
-From the FDA list of requirements necessary to be an accredited online pharmacy, we will focus on the following aspects: a physical address, a telephone number in the United States, a license in the state(s) in which they are operating or do business. We will also use NLP on the text within the websites to determine if there are any other unknown identifying factors.
+* [Datasets](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/tree/main/Datasets)
 
-After determining whether or not a website has the required items to be an accredited pharmacy, an additional step of authentication is required. Our models will not only need to determine if a website has the necessary requirements, but also that the items are authentic, requiring a two-step classification process. After determining through image recognition, whether an online pharmacy has a license (0) or not (1), our model will then need to determine whether the license is authentic (0) or not (1). The model will compare the extracted licenses against a library of known-authentic licenses that we provide. Similarly, after using NLP to determine whether the website has an address (0) or not (1), our model will verify with an API whether the address is authentic (0) or not (1). The same process will be the same for whether there is a phone number (0) or not (1), and if it is authentic (0) or not (1). The final part will be to use NLP to determine if the model can use the body text of a website to determine if a pharmaceutical website is authentic (0) or not (1).
+* [Text preprocessing & BERT model](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/BERTModel_Final.ipynb)
 
-### Data Pipeline
-#### Extract, Transform, Load (ETL)
-The first step in the pipeline will be to scrape the 87 known accredited pharmaceutical websites and the 45 known non-accredited pharmaceutical websites. The scraping will be done using the BeautifulSoup library. All components of the websites will be scraped, parsed, and then added to the dataframe as individual features. Types of features will include: URL, website name/title, phone number, address, license images, and text.
+* [Image preprocessing & MobileNetV2 model](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/mobilenetv2-img-classification.ipynb)
+    * [Testing & Selecting the best image model](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/IMG_classification_model.ipynb)
 
-One dataframe will be created for all of the data collected, with a feature distinguishing the known accredited websites from the known non-accredited websites. The next step will be to connect to APIs that can verify whether the scraped phone numbers and addresses are real or not. USPS provides APIs to validate a zip code or address, which will be used to validate the addresses of the pharmacies.1 A number of APIs are also available online to validate phone numbers. Two Free trials offered by these APIs will be leveraged for this project. Features will be added for each website distinguishing between real and fake addresses and phone numbers. For the text data, preprocessing will be performed to prepare the text for the training models. Once all scraping, parsing, cleaning, and loading is completed, modeling can be performed.
+* Literature & Reporting:
+    * [Project Proposal & Literature Review](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/Detecting%20Accredited%20vs%20Non-accredited%20Online%20Pharmacies%20with%20Multimodal%20Deep%20Learning.pdf) 
+    * [Model Design & Implementation](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/DS%206050%20Milestone%202%20-%20Model%20Design%20and%20Implementation%20-%20Group%2013.pdf)
+    * [Final Report & Results]()
 
-#### Multimodal Deep Learning
-For this study, we will use Multimodal Deep Learning (MDL) in order to harness multiple types of data. The main two types of data will be text and images. A neural network like a Convolutional Neural Network (CNN) would be appropriate for training on images. A neural network like Long-Short-Term-Memory (LSTM) would be appropriate for modeling text data. For MDL, these different neural networks can be combined through concatenation, and then applying softmax, in order to achieve a single output. Since the data are different and of different sizes, it is necessary to add weighted combinations to the subnetworks. This process can improve the overall outcome of the predictions when compared to modeling the neural networks separately. 
+### Model Performance
+BERT Model Performance
+![BERTModel](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/plots/BERTModelResults.png)
 
-#### BERT for Pharmacy Text Classification
-![bertmodeloutput](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/fitModelOutput.jpg)
-![bertplots](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/bertplots.jpg)
-High accuracy was achieved using BERT to classify pharmacy website text, using Accredited (0) and Non-Accredited (1) labels. 
+MobileNetV2 Model Performance
+
+<img src="https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/plots/MobileNetResults.png" width="300" height="300" />
+
+### Future Work
+We recommend combining the image and text models with a MultliModal Model for a more comprehensive approach to classifying pharmacy website content as a whole. 
