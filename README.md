@@ -19,8 +19,8 @@ Our custom dataset includes web-scraped content from the home pages of 72 known 
     * [Testing & Selecting the best image model](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/IMG_classification_model.ipynb)
 
 * Literature & Reporting:
-    * [Project Proposal & Literature Review](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/Detecting%20Accredited%20vs%20Non-accredited%20Online%20Pharmacies%20with%20Multimodal%20Deep%20Learning.pdf) 
-    * [Model Design & Implementation](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/DS%206050%20Milestone%202%20-%20Model%20Design%20and%20Implementation%20-%20Group%2013.pdf)
+    * [Project Proposal & Literature Review](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/Reports/Detecting%20Accredited%20vs%20Non-accredited%20Online%20Pharmacies%20with%20Multimodal%20Deep%20Learning.pdf) 
+    * [Model Design & Implementation](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/Reports/DS%206050%20Milestone%202%20-%20Model%20Design%20and%20Implementation%20-%20Group%2013.pdf)
     * [Final Report & Results]()
 
 ### Model Performance
