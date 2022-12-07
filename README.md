@@ -1,4 +1,4 @@
-## Detecting Accredited & Non-accredited Online Pharmacies with Deep Learning
+## Detecting Accredited & Non-Accredited Online Pharmacies with Deep Learning
 
 ### Abstract
 The objective of this study was to harness neural networks to solve the rampant problem of non-accredited online pharmacies performing unapproved sales of drugs. A BERT model and MobileNetV2 model were used to classify the text and images of online pharmacies as accredited and non-accredited. Both models achieved moderately high accuracy on the validation datasets, with the BERT model at 90% and the MobileNetV2 model at 87% accuracy. Future work using a MultiModal model is recommended to combine the image and text models for improved overall accuracy.
