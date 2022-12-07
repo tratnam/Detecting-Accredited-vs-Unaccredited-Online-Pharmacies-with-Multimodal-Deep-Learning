@@ -23,7 +23,7 @@ Below are the notebooks, datasets, models, and results:
 * Literature & Reporting:
     * [Project Proposal & Literature Review](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/Reports/Detecting%20Accredited%20vs%20Non-accredited%20Online%20Pharmacies%20with%20Multimodal%20Deep%20Learning.pdf) 
     * [Model Design & Implementation](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/Reports/DS%206050%20Milestone%202%20-%20Model%20Design%20and%20Implementation%20-%20Group%2013.pdf)
-    * [Final Report & Results]()
+    * [Final Report & Results](https://github.com/HaleyEgan/Detecting-Accredited-vs-Unaccredited-Online-Pharmacies-with-Multimodal-Deep-Learning/blob/main/Reports/DS%206050_Group%2013_Final%20Paper.pdf)
 
 ### Model Performance
 BERT Model Performance
